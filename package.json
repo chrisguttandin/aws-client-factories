@@ -32,7 +32,6 @@
     "url": "https://github.com/chrisguttandin/aws-client-factories.git"
   },
   "scripts": {
-    "postinstall": "grunt githooks",
     "test": "grunt test"
   },
   "version": "0.0.0"
