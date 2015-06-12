@@ -1,3 +1,3 @@
 # aws-client-factories
 
-For now it only supports DynamoDB.
+Work in progress ... for now it only supports DynamoDB.
