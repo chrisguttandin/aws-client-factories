@@ -25,7 +25,7 @@
     "S3"
   ],
   "license": "MIT",
-  "main": "src/module.js",
+  "main": "build/module.js",
   "name": "aws-client-factories",
   "repository": {
     "type": "git",
