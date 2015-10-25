@@ -7,12 +7,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var AWS = new require('aws-sdk'),
     di = require('di');
 
-var DynamoDbClientFactory = (function () {
-    function DynamoDbClientFactory() {
-        _classCallCheck(this, DynamoDbClientFactory);
+var S3ClientFactory = (function () {
+    function S3ClientFactory() {
+        _classCallCheck(this, S3ClientFactory);
     }
 
-    _createClass(DynamoDbClientFactory, [{
+    _createClass(S3ClientFactory, [{
         key: 'create',
         value: function create() {
             var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
@@ -39,13 +39,13 @@ var DynamoDbClientFactory = (function () {
                 options.secretAccessKey = environment.AWS_SECRET_KEY;
             }
 
-            return new AWS.DynamoDB(options);
+            return new AWS.S3(options);
         }
     }]);
 
-    return DynamoDbClientFactory;
+    return S3ClientFactory;
 })();
 
-di.annotate(DynamoDbClientFactory);
+di.annotate(S3ClientFactory);
 
-module.exports.DynamoDbClientFactory = DynamoDbClientFactory;
+module.exports.S3ClientFactory = S3ClientFactory;
