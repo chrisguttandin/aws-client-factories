@@ -2,7 +2,7 @@
 
 var AWS = new require('aws-sdk'),
     di = require('di'),
-    DynamoDbClientFactory = require('../../../src/factories/dynamo-db.js').DynamoDbClientFactory;
+    DynamoDbClientFactory = require('../../../build/factories/dynamo-db.js').DynamoDbClientFactory;
 
 describe('dynamoDbClientFactory', function () {
 

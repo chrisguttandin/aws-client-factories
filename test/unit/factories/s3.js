@@ -2,7 +2,7 @@
 
 var AWS = new require('aws-sdk'),
     di = require('di'),
-    S3ClientFactory = require('../../../src/factories/s3.js').S3ClientFactory;
+    S3ClientFactory = require('../../../build/factories/s3.js').S3ClientFactory;
 
 describe('s3ClientFactory', function () {
 
