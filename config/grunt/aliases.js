@@ -14,6 +14,6 @@ module.exports = {
     ],
     test: [
         'build',
-        'mochaTest:test',
+        'mochaTest:test'
     ]
 };
