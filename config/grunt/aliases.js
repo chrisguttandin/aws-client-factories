@@ -13,6 +13,7 @@ module.exports = {
         'jshint'
     ],
     test: [
+        'build',
         'mochaTest:test',
     ]
 };
