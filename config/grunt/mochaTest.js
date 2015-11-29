@@ -24,6 +24,7 @@ module.exports = {
             ]
         },
         src: [
+            'test/assumption/**/*.js',
             'test/unit/**/*.js'
         ]
     }
