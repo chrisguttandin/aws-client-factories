@@ -37,7 +37,7 @@ describe('dynamoDbClientFactory', function () {
             process.env.REGION = region;
 
             secretAccessKey = 'a fake secret access key';
-            process.env.AWS_SECRET_KEY = secretAccessKey;
+            process.env.AWS_SECRET_ACCESS_KEY = secretAccessKey;
         });
 
         it('should create a DynamoDB client with environment variables', function () {

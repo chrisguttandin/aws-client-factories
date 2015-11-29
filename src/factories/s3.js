@@ -25,7 +25,7 @@ class S3ClientFactory {
         }
 
         if (options.secretAccessKey === undefined) {
-            options.secretAccessKey = environment.AWS_SECRET_KEY;
+            options.secretAccessKey = environment.AWS_SECRET_ACCESS_KEY;
         }
 
         return new AWS.S3(options);
