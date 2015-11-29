@@ -21,23 +21,11 @@ describe('s3ClientFactory', function () {
 
     describe('create()', function () {
 
-        var accessKeyId,
-            endpoint,
-            region,
-            secretAccessKey;
+        var endpoint;
 
         beforeEach(function () {
-            accessKeyId = 'a fake access key id';
-            process.env.AWS_ACCESS_KEY_ID = accessKeyId;
-
             endpoint = 'a fake endpoint';
             process.env.AWS_ENDPOINT = endpoint;
-
-            region = 'a fake region';
-            process.env.REGION = region;
-
-            secretAccessKey = 'a fake secret access key';
-            process.env.AWS_SECRET_ACCESS_KEY = secretAccessKey;
         });
 
         it('should create an S3 client with environment variables', function () {
@@ -46,17 +34,17 @@ describe('s3ClientFactory', function () {
             expect(AWS.S3).to.have.been.calledOnce;
 
             expect(AWS.S3).to.have.been.calledWithExactly({
-                accessKeyId: accessKeyId,
-                endpoint: new AWS.Endpoint(endpoint),
-                region: region,
-                secretAccessKey: secretAccessKey
+                endpoint: new AWS.Endpoint(endpoint)
             });
         });
 
         it('should create an S3 client with the given options', function () {
-            var params = {
+            var accessKeyId,
+                params = {
                     TableName: 'a fake table name'
-                };
+                },
+                region,
+                secretAccessKey;
 
             accessKeyId = 'another fake access key id';
             endpoint = 'another fake endpoint';
