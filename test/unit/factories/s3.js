@@ -1,7 +1,6 @@
-'use strict';
-
 import AWS from 'aws-sdk';
 import { S3ClientFactory } from '../../../build/factories/s3';
+import { stub } from 'sinon';
 
 describe('s3ClientFactory', function () {
 
@@ -12,7 +11,7 @@ describe('s3ClientFactory', function () {
     });
 
     beforeEach(function () {
-        AWS.S3 = sinon.stub();
+        AWS.S3 = stub();
     });
 
     describe('create()', function () {
@@ -48,21 +47,21 @@ describe('s3ClientFactory', function () {
             secretAccessKey = 'another fake secret access key';
 
             s3ClientFactory.create({
-                accessKeyId: accessKeyId,
-                endpoint: endpoint,
-                params: params,
-                region: region,
-                secretAccessKey: secretAccessKey
+                accessKeyId,
+                endpoint,
+                params,
+                region,
+                secretAccessKey
             });
 
             expect(AWS.S3).to.have.been.calledOnce;
 
             expect(AWS.S3).to.have.been.calledWithExactly({
-                accessKeyId: accessKeyId,
+                accessKeyId,
                 endpoint: new AWS.Endpoint(endpoint),
-                params: params,
-                region: region,
-                secretAccessKey: secretAccessKey
+                params,
+                region,
+                secretAccessKey
             });
         });
 

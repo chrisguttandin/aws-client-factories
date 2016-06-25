@@ -1,7 +1,6 @@
-'use strict';
-
 import AWS from 'aws-sdk';
 import { DynamoDbClientFactory } from '../../../build/factories/dynamo-db';
+import { stub } from 'sinon';
 
 describe('dynamoDbClientFactory', function () {
 
@@ -12,7 +11,7 @@ describe('dynamoDbClientFactory', function () {
     });
 
     beforeEach(function () {
-        AWS.DynamoDB = sinon.stub();
+        AWS.DynamoDB = stub();
     });
 
     describe('create()', function () {
@@ -48,21 +47,21 @@ describe('dynamoDbClientFactory', function () {
             secretAccessKey = 'another fake secret access key';
 
             dynamoDbClientFactory.create({
-                accessKeyId: accessKeyId,
-                endpoint: endpoint,
-                params: params,
-                region: region,
-                secretAccessKey: secretAccessKey
+                accessKeyId,
+                endpoint,
+                params,
+                region,
+                secretAccessKey
             });
 
             expect(AWS.DynamoDB).to.have.been.calledOnce;
 
             expect(AWS.DynamoDB).to.have.been.calledWithExactly({
-                accessKeyId: accessKeyId,
+                accessKeyId,
                 endpoint: new AWS.Endpoint(endpoint),
-                params: params,
-                region: region,
-                secretAccessKey: secretAccessKey
+                params,
+                region,
+                secretAccessKey
             });
         });
 

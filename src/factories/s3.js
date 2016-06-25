@@ -1,5 +1,3 @@
-'use strict';
-
 import { Endpoint, S3 } from 'aws-sdk';
 
 export class S3ClientFactory {

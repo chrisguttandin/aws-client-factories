@@ -1,5 +1,3 @@
-'use strict';
-
 import { DynamoDB, Endpoint } from 'aws-sdk';
 
 export class DynamoDbClientFactory {

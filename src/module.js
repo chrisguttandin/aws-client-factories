@@ -1,5 +1,3 @@
-'use strict';
-
 import { DynamoDbClientFactory } from './factories/dynamo-db';
 import { S3ClientFactory } from './factories/s3';
 

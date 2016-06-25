@@ -1,5 +1,3 @@
-'use strict';
-
 describe('AWS.DynamoDB', function () {
 
     var awsAccessKeyId,
@@ -21,7 +19,7 @@ describe('AWS.DynamoDB', function () {
         process.env.AWS_REGION = awsRegion;
         process.env.AWS_SECRET_ACCESS_KEY = awsSecretAccessKey;
 
-        DynamoDB = new require('aws-sdk').DynamoDB;
+        DynamoDB = require('aws-sdk').DynamoDB;
     });
 
     it('should configure a DynamoDB client with environment variables for the credentials and region', function () {

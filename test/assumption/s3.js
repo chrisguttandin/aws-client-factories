@@ -1,5 +1,3 @@
-'use strict';
-
 describe('AWS.S3', function () {
 
     var awsAccessKeyId,
@@ -21,7 +19,7 @@ describe('AWS.S3', function () {
         process.env.AWS_REGION = awsRegion;
         process.env.AWS_SECRET_ACCESS_KEY = awsSecretAccessKey;
 
-        S3 = new require('aws-sdk').S3;
+        S3 = require('aws-sdk').S3;
     });
 
     it('should configure a S3 client with environment variables', function () {

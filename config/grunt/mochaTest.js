@@ -3,7 +3,6 @@
 var babelOptions = require('../babel/test.json'),
     babelRegister = require('babel-register'),
     chai = require('chai'),
-    sinon = require('sinon'),
     sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
@@ -19,7 +18,6 @@ module.exports = {
                 },
                 function () {
                     global.expect = chai.expect;
-                    global.sinon = sinon;
                 }
             ]
         },
