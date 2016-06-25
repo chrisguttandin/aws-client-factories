@@ -1,5 +1,8 @@
 {
   "author": "Christoph Guttandin",
+  "bugs": {
+    "url": "https://github.com/chrisguttandin/aws-client-factories/issues"
+  },
   "dependencies": {
     "aws-sdk": "^2.2.11",
     "di": "^2.0.0-pre-14"
