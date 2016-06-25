@@ -1,9 +1,8 @@
 'use strict';
 
-var AWS = new require('aws-sdk'),
-    di = require('di');
+import { Endpoint, S3 } from 'aws-sdk';
 
-class S3ClientFactory {
+export class S3ClientFactory {
 
     create (options = {}) {
         var environment = process.env;
@@ -12,15 +11,11 @@ class S3ClientFactory {
             options.endpoint = environment.AWS_ENDPOINT;
         }
 
-        if (options.endpoint !== undefined && !(options instanceof AWS.Endpoint)) {
-            options.endpoint = new AWS.Endpoint(options.endpoint);
+        if (options.endpoint !== undefined && !(options instanceof Endpoint)) {
+            options.endpoint = new Endpoint(options.endpoint);
         }
 
-        return new AWS.S3(options);
+        return new S3(options);
     }
 
 }
-
-di.annotate(S3ClientFactory);
-
-module.exports.S3ClientFactory = S3ClientFactory;

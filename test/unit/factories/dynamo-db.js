@@ -1,18 +1,14 @@
 'use strict';
 
-var AWS = new require('aws-sdk'),
-    di = require('di'),
-    DynamoDbClientFactory = require('../../../build/factories/dynamo-db.js').DynamoDbClientFactory;
+import AWS from 'aws-sdk';
+import { DynamoDbClientFactory } from '../../../build/factories/dynamo-db';
 
 describe('dynamoDbClientFactory', function () {
 
-    var dynamoDbClientFactory,
-        injector;
+    var dynamoDbClientFactory;
 
     beforeEach(function () {
-        injector = new di.Injector();
-
-        dynamoDbClientFactory = injector.get(DynamoDbClientFactory);
+        dynamoDbClientFactory = new DynamoDbClientFactory();
     });
 
     beforeEach(function () {

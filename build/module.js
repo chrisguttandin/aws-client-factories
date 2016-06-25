@@ -1,12 +1,14 @@
 'use strict';
 
-var di = require('di'),
-    DynamoDbClientFactory = require('./factories/dynamo-db.js').DynamoDbClientFactory,
-    injector,
-    S3ClientFactory = require('./factories/s3.js').S3ClientFactory;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.s3ClientFactory = exports.dynamoDbClientFactory = undefined;
 
-injector = new di.Injector();
+var _dynamoDb = require('./factories/dynamo-db');
 
-module.exports.dynamoDbClientFactory = injector.get(DynamoDbClientFactory);
+var _s = require('./factories/s3');
 
-module.exports.s3ClientFactory = injector.get(S3ClientFactory);
+const dynamoDbClientFactory = exports.dynamoDbClientFactory = new _dynamoDb.DynamoDbClientFactory();
+
+const s3ClientFactory = exports.s3ClientFactory = new _s.S3ClientFactory();

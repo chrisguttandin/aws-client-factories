@@ -1,18 +1,14 @@
 'use strict';
 
-var AWS = new require('aws-sdk'),
-    di = require('di'),
-    S3ClientFactory = require('../../../build/factories/s3.js').S3ClientFactory;
+import AWS from 'aws-sdk';
+import { S3ClientFactory } from '../../../build/factories/s3';
 
 describe('s3ClientFactory', function () {
 
-    var injector,
-        s3ClientFactory;
+    var s3ClientFactory;
 
     beforeEach(function () {
-        injector = new di.Injector();
-
-        s3ClientFactory = injector.get(S3ClientFactory);
+        s3ClientFactory = new S3ClientFactory();
     });
 
     beforeEach(function () {

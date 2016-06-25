@@ -1,15 +1,12 @@
 'use strict';
 
-var chai = require('chai'),
-    register = require('babel/register'),
+var babelOptions = require('../babel/test.json'),
+    babelRegister = require('babel-register'),
+    chai = require('chai'),
     sinon = require('sinon'),
     sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
-
-register({
-    stage: 2
-});
 
 module.exports = {
     test: {
@@ -17,6 +14,9 @@ module.exports = {
             bail: true,
             clearRequireCache: true,
             require: [
+                function () {
+                    babelRegister(babelOptions);
+                },
                 function () {
                     global.expect = chai.expect;
                     global.sinon = sinon;

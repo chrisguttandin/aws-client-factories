@@ -1,9 +1,8 @@
 'use strict';
 
-var AWS = new require('aws-sdk'),
-    di = require('di');
+import { DynamoDB, Endpoint } from 'aws-sdk';
 
-class DynamoDbClientFactory {
+export class DynamoDbClientFactory {
 
     create (options = {}) {
         var environment = process.env;
@@ -12,15 +11,11 @@ class DynamoDbClientFactory {
             options.endpoint = environment.AWS_ENDPOINT;
         }
 
-        if (options.endpoint !== undefined && !(options instanceof AWS.Endpoint)) {
-            options.endpoint = new AWS.Endpoint(options.endpoint);
+        if (options.endpoint !== undefined && !(options instanceof Endpoint)) {
+            options.endpoint = new Endpoint(options.endpoint);
         }
 
-        return new AWS.DynamoDB(options);
+        return new DynamoDB(options);
     }
 
 }
-
-di.annotate(DynamoDbClientFactory);
-
-module.exports.DynamoDbClientFactory = DynamoDbClientFactory;
