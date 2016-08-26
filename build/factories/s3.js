@@ -10,6 +10,7 @@ var _awsSdk = require('aws-sdk');
 class S3ClientFactory {
 
     create(options = {}) {
+        // eslint-disable-line class-methods-use-this
         var environment = process.env;
 
         if (options.endpoint === undefined && environment.AWS_ENDPOINT !== undefined) {
