@@ -44,7 +44,7 @@
     "url": "https://github.com/chrisguttandin/aws-client-factories.git"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt lint && grunt test"
   },
   "version": "3.0.2"
 }
