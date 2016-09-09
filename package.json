@@ -4,7 +4,7 @@
     "url": "https://github.com/chrisguttandin/aws-client-factories/issues"
   },
   "dependencies": {
-    "aws-sdk": "^2.4.2",
+    "aws-sdk": "^2.6.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3"
   },
   "description": "A helper to instantiate various AWS clients with environment variables.",
