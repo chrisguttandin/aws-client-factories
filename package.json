@@ -13,7 +13,7 @@
     "babel-eslint": "^6.1.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
-    "eslint-config-holy-grail": "^8.0.0",
+    "eslint-config-holy-grail": "^9.0.0",
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
     "grunt-cli": "^1.2.0",
