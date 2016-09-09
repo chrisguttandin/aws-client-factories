@@ -12,7 +12,7 @@ describe('AWS.DynamoDB', function () {
         awsRegion = 'a fake region';
         awsSecretAccessKey = 'a fake aws secret access key';
 
-        delete require.cache[require.resolve('aws-sdk')];
+        Object.keys(require.cache).forEach((key) => delete require.cache[key]);
 
         process.env.AWS_ACCESS_KEY_ID = awsAccessKeyId;
         process.env.AWS_ENDPOINT = awsEndpoint;
