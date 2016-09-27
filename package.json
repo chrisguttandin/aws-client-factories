@@ -10,7 +10,7 @@
   "description": "A helper to instantiate various AWS clients with environment variables.",
   "devDependencies": {
     "babel": "^6.5.2",
-    "babel-eslint": "^6.1.0",
+    "babel-eslint": "^7.0.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
     "eslint-config-holy-grail": "^9.0.0",
