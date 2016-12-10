@@ -4,7 +4,7 @@ import { stub } from 'sinon';
 
 describe('s3ClientFactory', function () {
 
-    var s3ClientFactory;
+    let s3ClientFactory;
 
     beforeEach(function () {
         s3ClientFactory = new S3ClientFactory();
@@ -16,7 +16,7 @@ describe('s3ClientFactory', function () {
 
     describe('create()', function () {
 
-        var endpoint;
+        let endpoint;
 
         beforeEach(function () {
             endpoint = 'a fake endpoint';
@@ -34,17 +34,13 @@ describe('s3ClientFactory', function () {
         });
 
         it('should create an S3 client with the given options', function () {
-            var accessKeyId,
-                params = {
-                    TableName: 'a fake table name'
-                },
-                region,
-                secretAccessKey;
-
-            accessKeyId = 'another fake access key id';
-            endpoint = 'another fake endpoint';
-            region = 'another fake region';
-            secretAccessKey = 'another fake secret access key';
+            const accessKeyId = 'another fake access key id';
+            const endpoint = 'another fake endpoint';
+            const params = {
+                TableName: 'a fake table name'
+            };
+            const region = 'another fake region';
+            const secretAccessKey = 'another fake secret access key';
 
             s3ClientFactory.create({
                 accessKeyId,

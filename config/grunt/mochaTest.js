@@ -1,9 +1,9 @@
 'use strict';
 
-var babelOptions = require('../babel/test.json'),
-    babelRegister = require('babel-register'),
-    chai = require('chai'),
-    sinonChai = require('sinon-chai');
+const babelOptions = require('../babel/test.json');
+const babelRegister = require('babel-register');
+const chai = require('chai');
+const sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
 

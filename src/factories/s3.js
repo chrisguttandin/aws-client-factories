@@ -3,7 +3,7 @@ import { Endpoint, S3 } from 'aws-sdk';
 export class S3ClientFactory {
 
     create (options = {}) { // eslint-disable-line class-methods-use-this
-        var environment = process.env;
+        const environment = process.env;
 
         if (options.endpoint === undefined && environment.AWS_ENDPOINT !== undefined) {
             options.endpoint = environment.AWS_ENDPOINT;

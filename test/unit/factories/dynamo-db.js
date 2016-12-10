@@ -4,7 +4,7 @@ import { stub } from 'sinon';
 
 describe('dynamoDbClientFactory', function () {
 
-    var dynamoDbClientFactory;
+    let dynamoDbClientFactory;
 
     beforeEach(function () {
         dynamoDbClientFactory = new DynamoDbClientFactory();
@@ -16,7 +16,7 @@ describe('dynamoDbClientFactory', function () {
 
     describe('create()', function () {
 
-        var endpoint;
+        let endpoint;
 
         beforeEach(function () {
             endpoint = 'a fake endpoint';
@@ -34,17 +34,13 @@ describe('dynamoDbClientFactory', function () {
         });
 
         it('should create a DynamoDB client with the given options', function () {
-            var accessKeyId,
-                params = {
-                    TableName: 'a fake table name'
-                },
-                region,
-                secretAccessKey;
-
-            accessKeyId = 'another fake access key id';
-            endpoint = 'another fake endpoint';
-            region = 'another fake region';
-            secretAccessKey = 'another fake secret access key';
+            const accessKeyId = 'another fake access key id';
+            const endpoint = 'another fake endpoint';
+            const params = {
+                TableName: 'a fake table name'
+            };
+            const region = 'another fake region';
+            const secretAccessKey = 'another fake secret access key';
 
             dynamoDbClientFactory.create({
                 accessKeyId,

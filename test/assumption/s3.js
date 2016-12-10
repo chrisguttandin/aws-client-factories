@@ -1,10 +1,10 @@
 describe('AWS.S3', function () {
 
-    var awsAccessKeyId,
-        awsEndpoint,
-        awsRegion,
-        awsSecretAccessKey,
-        S3;
+    let awsAccessKeyId;
+    let awsEndpoint;
+    let awsRegion;
+    let awsSecretAccessKey;
+    let S3;
 
     beforeEach(function () {
         awsAccessKeyId = 'a fake aws access key id';
@@ -23,7 +23,7 @@ describe('AWS.S3', function () {
     });
 
     it('should configure a S3 client with environment variables', function () {
-        var s3 = new S3();
+        const s3 = new S3();
 
         expect(s3.config.credentials.accessKeyId).to.equal(awsAccessKeyId);
         expect(s3.config.region).to.equal(awsRegion);
@@ -31,7 +31,7 @@ describe('AWS.S3', function () {
     });
 
     it('should not configure a S3 client with environment variables for the endpoint', function () {
-        var s3 = new S3();
+        const s3 = new S3();
 
         expect(s3.config.endpoint).to.not.equal(awsEndpoint);
     });
