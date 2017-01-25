@@ -47,5 +47,6 @@
     "precommit": "grunt lint",
     "test": "grunt lint && grunt test"
   },
+  "types": "src/module.d.ts",
   "version": "3.0.4"
 }
