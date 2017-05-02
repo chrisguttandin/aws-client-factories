@@ -28,7 +28,7 @@
     "sinon-chai": "^2.8.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=6.10.3"
   },
   "homepage": "https://github.com/chrisguttandin/aws-client-factories",
   "keywords": [
