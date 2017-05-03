@@ -1,5 +1,3 @@
-'use strict';
-
 const babelOptions = require('../babel/build.json');
 
 module.exports = {
