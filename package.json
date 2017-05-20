@@ -30,6 +30,7 @@
     "node": ">=6.10.3"
   },
   "files": [
+    "build/"
     "src/"
   ],
   "homepage": "https://github.com/chrisguttandin/aws-client-factories",
