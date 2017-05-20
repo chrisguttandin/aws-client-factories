@@ -48,6 +48,7 @@
   },
   "scripts": {
     "precommit": "grunt lint",
+    "prepublish": "grunt build",
     "test": "grunt lint && grunt test"
   },
   "types": "src/module.d.ts",
