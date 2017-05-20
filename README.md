@@ -1,7 +1,5 @@
 # aws-client-factories
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/chrisguttandin/aws-client-factories.svg)](https://greenkeeper.io/)
-
 **A helper to instantiate various AWS clients with environment variables.**
 
 [![tests](https://img.shields.io/travis/chrisguttandin/aws-client-factories/master.svg?style=flat-square)](https://travis-ci.org/chrisguttandin/aws-client-factories)
