@@ -4,7 +4,7 @@ module.exports = {
     build: {
         files: [{
             cwd: 'src/',
-            dest: 'build/',
+            dest: 'build/node',
             expand: true,
             src: [
                 '**/*.js'
