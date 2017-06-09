@@ -4,7 +4,7 @@
     "url": "https://github.com/chrisguttandin/aws-client-factories/issues"
   },
   "dependencies": {
-    "aws-sdk": "^2.62.0"
+    "aws-sdk": "^2.66.0"
   },
   "description": "A helper to instantiate various AWS clients with environment variables.",
   "devDependencies": {
