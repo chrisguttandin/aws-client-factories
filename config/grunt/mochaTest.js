@@ -20,7 +20,7 @@ module.exports = {
             ]
         },
         src: [
-            'test/assumption/**/*.js',
+            'test/expectation/**/*.js',
             'test/unit/**/*.js'
         ]
     }
