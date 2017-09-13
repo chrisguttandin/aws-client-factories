@@ -1,6 +1,6 @@
 import AWS from 'aws-sdk';
 import { S3ClientFactory } from '../../../build/node/factories/s3';
-import { stub } from 'sinon';
+import { stub } from 'sinon';
 
 describe('s3ClientFactory', function () {
 

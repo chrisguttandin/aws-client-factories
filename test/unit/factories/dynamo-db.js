@@ -1,6 +1,6 @@
 import AWS from 'aws-sdk';
 import { DynamoDbClientFactory } from '../../../build/node/factories/dynamo-db';
-import { stub } from 'sinon';
+import { stub } from 'sinon';
 
 describe('dynamoDbClientFactory', function () {
 
