@@ -28,9 +28,7 @@ describe('s3ClientFactory', function () {
 
             expect(AWS.S3).to.have.been.calledOnce;
 
-            expect(AWS.S3).to.have.been.calledWithExactly({
-                endpoint: new AWS.Endpoint(endpoint)
-            });
+            expect(AWS.S3).to.have.been.calledWithExactly({ endpoint });
         });
 
         it('should create an S3 client with the given options', function () {
@@ -54,7 +52,7 @@ describe('s3ClientFactory', function () {
 
             expect(AWS.S3).to.have.been.calledWithExactly({
                 accessKeyId,
-                endpoint: new AWS.Endpoint(endpoint),
+                endpoint,
                 params,
                 region,
                 secretAccessKey

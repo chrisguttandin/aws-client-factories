@@ -28,9 +28,7 @@ describe('dynamoDbClientFactory', function () {
 
             expect(AWS.DynamoDB).to.have.been.calledOnce;
 
-            expect(AWS.DynamoDB).to.have.been.calledWithExactly({
-                endpoint: new AWS.Endpoint(endpoint)
-            });
+            expect(AWS.DynamoDB).to.have.been.calledWithExactly({ endpoint });
         });
 
         it('should create a DynamoDB client with the given options', function () {
@@ -54,7 +52,7 @@ describe('dynamoDbClientFactory', function () {
 
             expect(AWS.DynamoDB).to.have.been.calledWithExactly({
                 accessKeyId,
-                endpoint: new AWS.Endpoint(endpoint),
+                endpoint,
                 params,
                 region,
                 secretAccessKey
