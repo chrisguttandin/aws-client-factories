@@ -3,10 +3,6 @@ module.exports = {
         'clean:build',
         'babel:build'
     ],
-    continuous: [
-        'mochaTest:test',
-        'watch:continuous'
-    ],
     lint: [
         'eslint'
     ],
