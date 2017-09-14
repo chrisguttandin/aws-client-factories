@@ -38,7 +38,8 @@
     "node": ">=6.11.2"
   },
   "files": [
-    "build/",
+    "build/node/",
+    "build/es2015/",
     "src/"
   ],
   "homepage": "https://github.com/chrisguttandin/aws-client-factories",
