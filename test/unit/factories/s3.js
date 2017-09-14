@@ -2,28 +2,28 @@ import AWS from 'aws-sdk';
 import { S3ClientFactory } from '../../../build/node/factories/s3';
 import { stub } from 'sinon';
 
-describe('s3ClientFactory', function () {
+describe('s3ClientFactory', () => {
 
     let s3ClientFactory;
 
-    beforeEach(function () {
+    beforeEach(() => {
         s3ClientFactory = new S3ClientFactory();
     });
 
-    beforeEach(function () {
+    beforeEach(() => {
         AWS.S3 = stub();
     });
 
-    describe('create()', function () {
+    describe('create()', () => {
 
         let endpoint;
 
-        beforeEach(function () {
+        beforeEach(() => {
             endpoint = 'a fake endpoint';
             process.env.AWS_ENDPOINT = endpoint;
         });
 
-        it('should create an S3 client with environment variables', function () {
+        it('should create an S3 client with environment variables', () => {
             s3ClientFactory.create();
 
             expect(AWS.S3).to.have.been.calledOnce;
@@ -31,7 +31,7 @@ describe('s3ClientFactory', function () {
             expect(AWS.S3).to.have.been.calledWithExactly({ endpoint });
         });
 
-        it('should create an S3 client with the given options', function () {
+        it('should create an S3 client with the given options', () => {
             const accessKeyId = 'another fake access key id';
             const endpoint = 'another fake endpoint';
             const params = {

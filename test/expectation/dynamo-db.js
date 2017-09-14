@@ -1,4 +1,4 @@
-describe('AWS.DynamoDB', function () {
+describe('AWS.DynamoDB', () => {
 
     let awsAccessKeyId;
     let awsEndpoint;
@@ -6,7 +6,7 @@ describe('AWS.DynamoDB', function () {
     let awsSecretAccessKey;
     let DynamoDB;
 
-    beforeEach(function () {
+    beforeEach(() => {
         awsAccessKeyId = 'a fake aws access key id';
         awsEndpoint = 'http://a-fake-endpoint.com:1234';
         awsRegion = 'a fake region';
@@ -22,7 +22,7 @@ describe('AWS.DynamoDB', function () {
         DynamoDB = require('aws-sdk').DynamoDB;
     });
 
-    it('should configure a DynamoDB client with environment variables for the credentials and region', function () {
+    it('should configure a DynamoDB client with environment variables for the credentials and region', () => {
         const dynamoDB = new DynamoDB();
 
         expect(dynamoDB.config.credentials.accessKeyId).to.equal(awsAccessKeyId);
@@ -30,7 +30,7 @@ describe('AWS.DynamoDB', function () {
         expect(dynamoDB.config.credentials.secretAccessKey).to.equal(awsSecretAccessKey);
     });
 
-    it('should not configure a DynamoDB client with environment variables for the endpoint', function () {
+    it('should not configure a DynamoDB client with environment variables for the endpoint', () => {
         const dynamoDB = new DynamoDB();
 
         expect(dynamoDB.config.endpoint).to.not.equal(awsEndpoint);

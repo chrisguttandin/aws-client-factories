@@ -1,4 +1,4 @@
-describe('AWS.S3', function () {
+describe('AWS.S3', () => {
 
     let awsAccessKeyId;
     let awsEndpoint;
@@ -6,7 +6,7 @@ describe('AWS.S3', function () {
     let awsSecretAccessKey;
     let S3;
 
-    beforeEach(function () {
+    beforeEach(() => {
         awsAccessKeyId = 'a fake aws access key id';
         awsEndpoint = 'http://a-fake-endpoint.com:1234';
         awsRegion = 'a fake region';
@@ -22,7 +22,7 @@ describe('AWS.S3', function () {
         S3 = require('aws-sdk').S3;
     });
 
-    it('should configure a S3 client with environment variables', function () {
+    it('should configure a S3 client with environment variables', () => {
         const s3 = new S3();
 
         expect(s3.config.credentials.accessKeyId).to.equal(awsAccessKeyId);
@@ -30,7 +30,7 @@ describe('AWS.S3', function () {
         expect(s3.config.credentials.secretAccessKey).to.equal(awsSecretAccessKey);
     });
 
-    it('should not configure a S3 client with environment variables for the endpoint', function () {
+    it('should not configure a S3 client with environment variables for the endpoint', () => {
         const s3 = new S3();
 
         expect(s3.config.endpoint).to.not.equal(awsEndpoint);

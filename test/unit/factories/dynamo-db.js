@@ -2,28 +2,28 @@ import AWS from 'aws-sdk';
 import { DynamoDbClientFactory } from '../../../build/node/factories/dynamo-db';
 import { stub } from 'sinon';
 
-describe('dynamoDbClientFactory', function () {
+describe('dynamoDbClientFactory', () => {
 
     let dynamoDbClientFactory;
 
-    beforeEach(function () {
+    beforeEach(() => {
         dynamoDbClientFactory = new DynamoDbClientFactory();
     });
 
-    beforeEach(function () {
+    beforeEach(() => {
         AWS.DynamoDB = stub();
     });
 
-    describe('create()', function () {
+    describe('create()', () => {
 
         let endpoint;
 
-        beforeEach(function () {
+        beforeEach(() => {
             endpoint = 'a fake endpoint';
             process.env.AWS_ENDPOINT = endpoint;
         });
 
-        it('should create a DynamoDB client with environment variables', function () {
+        it('should create a DynamoDB client with environment variables', () => {
             dynamoDbClientFactory.create();
 
             expect(AWS.DynamoDB).to.have.been.calledOnce;
@@ -31,7 +31,7 @@ describe('dynamoDbClientFactory', function () {
             expect(AWS.DynamoDB).to.have.been.calledWithExactly({ endpoint });
         });
 
-        it('should create a DynamoDB client with the given options', function () {
+        it('should create a DynamoDB client with the given options', () => {
             const accessKeyId = 'another fake access key id';
             const endpoint = 'another fake endpoint';
             const params = {
