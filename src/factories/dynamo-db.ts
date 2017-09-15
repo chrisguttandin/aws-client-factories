@@ -1,6 +1,7 @@
 import { DynamoDB } from 'aws-sdk';
+import { IDynamoDbClientFactory } from '../interfaces';
 
-export class DynamoDbClientFactory {
+export class DynamoDbClientFactory implements IDynamoDbClientFactory {
 
     public create (options: DynamoDB.ClientConfiguration = {}): DynamoDB {
         const environment = process.env;

@@ -1,6 +1,7 @@
 import { S3 } from 'aws-sdk';
+import { IS3ClientFactory } from '../interfaces';
 
-export class S3ClientFactory {
+export class S3ClientFactory implements IS3ClientFactory {
 
     public create (options: S3.ClientConfiguration = {}): S3 {
         const environment = process.env;
