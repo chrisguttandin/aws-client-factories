@@ -5,6 +5,7 @@ import { S3ClientFactory } from './factories/s3';
 type DynamoDBClientConfiguration = DynamoDB.ClientConfiguration;
 type S3ClientConfiguration = S3.ClientConfiguration;
 
+// @todo Define interfaces instead of exporting the constructors.
 export { DynamoDBClientConfiguration, DynamoDbClientFactory, S3ClientConfiguration, S3ClientFactory };
 
 export const dynamoDbClientFactory = new DynamoDbClientFactory();
