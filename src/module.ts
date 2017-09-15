@@ -5,7 +5,7 @@ import { S3ClientFactory } from './factories/s3';
 type DynamoDBClientConfiguration = DynamoDB.ClientConfiguration;
 type S3ClientConfiguration = S3.ClientConfiguration;
 
-export { DynamoDBClientConfiguration, S3ClientConfiguration };
+export { DynamoDBClientConfiguration, DynamoDbClientFactory, S3ClientConfiguration, S3ClientFactory };
 
 export const dynamoDbClientFactory = new DynamoDbClientFactory();
 
