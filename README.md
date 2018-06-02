@@ -4,6 +4,6 @@
 
 [![tests](https://img.shields.io/travis/chrisguttandin/aws-client-factories/master.svg?style=flat-square)](https://travis-ci.org/chrisguttandin/aws-client-factories)
 [![dependencies](https://img.shields.io/david/chrisguttandin/aws-client-factories.svg?style=flat-square)](https://www.npmjs.com/package/aws-client-factories)
-[![version](https://img.shields.io/npm/v/aws-client-factories.svg?style=flat-square)](https://www.npmjs.com/package/aws-client-factories)
+[![version](https://img.shields.io/npm/v/aws-client-factories.svg?style=flat-square)](https://www.npmjs.com/package/aws-client-factories) [![Greenkeeper badge](https://badges.greenkeeper.io/chrisguttandin/aws-client-factories.svg)](https://greenkeeper.io/)
 
 Work in progress ... for now it only supports DynamoDB and S3.
