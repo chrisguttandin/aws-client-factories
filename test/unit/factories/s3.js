@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 import { S3ClientFactory } from '../../../build/node/factories/s3';
+import { env } from 'process';
 import { stub } from 'sinon';
 
 describe('s3ClientFactory', () => {
@@ -20,7 +21,7 @@ describe('s3ClientFactory', () => {
 
         beforeEach(() => {
             endpoint = 'a fake endpoint';
-            process.env.AWS_ENDPOINT = endpoint;
+            env.AWS_ENDPOINT = endpoint;
         });
 
         it('should create an S3 client with environment variables', () => {

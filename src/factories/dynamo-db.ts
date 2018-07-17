@@ -1,13 +1,12 @@
 import { DynamoDB } from 'aws-sdk';
+import { env } from 'process';
 import { IDynamoDbClientFactory } from '../interfaces';
 
 export class DynamoDbClientFactory implements IDynamoDbClientFactory {
 
     public create (options: DynamoDB.ClientConfiguration = {}): DynamoDB {
-        const environment = process.env;
-
-        if (options.endpoint === undefined && environment.AWS_ENDPOINT !== undefined) {
-            options.endpoint = environment.AWS_ENDPOINT;
+        if (options.endpoint === undefined && env.AWS_ENDPOINT !== undefined) {
+            options.endpoint = env.AWS_ENDPOINT;
         }
 
         return new DynamoDB(options);

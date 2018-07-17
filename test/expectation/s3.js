@@ -1,3 +1,5 @@
+const { env } = require('process');
+
 describe('AWS.S3', () => {
 
     let awsAccessKeyId;
@@ -14,10 +16,10 @@ describe('AWS.S3', () => {
 
         Object.keys(require.cache).forEach((key) => delete require.cache[key]);
 
-        process.env.AWS_ACCESS_KEY_ID = awsAccessKeyId;
-        process.env.AWS_ENDPOINT = awsEndpoint;
-        process.env.AWS_REGION = awsRegion;
-        process.env.AWS_SECRET_ACCESS_KEY = awsSecretAccessKey;
+        env.AWS_ACCESS_KEY_ID = awsAccessKeyId;
+        env.AWS_ENDPOINT = awsEndpoint;
+        env.AWS_REGION = awsRegion;
+        env.AWS_SECRET_ACCESS_KEY = awsSecretAccessKey;
 
         S3 = require('aws-sdk').S3;
     });

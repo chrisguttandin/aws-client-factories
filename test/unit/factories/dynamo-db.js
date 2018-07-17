@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 import { DynamoDbClientFactory } from '../../../build/node/factories/dynamo-db';
+import { env } from 'process';
 import { stub } from 'sinon';
 
 describe('dynamoDbClientFactory', () => {
@@ -20,7 +21,7 @@ describe('dynamoDbClientFactory', () => {
 
         beforeEach(() => {
             endpoint = 'a fake endpoint';
-            process.env.AWS_ENDPOINT = endpoint;
+            env.AWS_ENDPOINT = endpoint;
         });
 
         it('should create a DynamoDB client with environment variables', () => {
