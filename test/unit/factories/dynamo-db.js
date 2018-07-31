@@ -34,7 +34,7 @@ describe('dynamoDbClientFactory', () => {
 
         it('should create a DynamoDB client with the given options', () => {
             const accessKeyId = 'another fake access key id';
-            const endpoint = 'another fake endpoint';
+            const anotherEndpoint = 'another fake endpoint';
             const params = {
                 TableName: 'a fake table name'
             };
@@ -43,7 +43,7 @@ describe('dynamoDbClientFactory', () => {
 
             dynamoDbClientFactory.create({
                 accessKeyId,
-                endpoint,
+                endpoint: anotherEndpoint,
                 params,
                 region,
                 secretAccessKey
@@ -53,7 +53,7 @@ describe('dynamoDbClientFactory', () => {
 
             expect(AWS.DynamoDB).to.have.been.calledWithExactly({
                 accessKeyId,
-                endpoint,
+                endpoint: anotherEndpoint,
                 params,
                 region,
                 secretAccessKey
