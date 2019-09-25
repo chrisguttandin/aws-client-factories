@@ -14,7 +14,7 @@
   },
   "description": "A helper to instantiate various AWS clients with environment variables.",
   "devDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.0",
     "@babel/register": "^7.6.0",
     "@commitlint/cli": "^8.1.0",
