@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "aws-sdk": "^2.548.0",
+    "aws-sdk": "^2.552.0",
     "tslib": "^1.10.0"
   },
   "description": "A helper to instantiate various AWS clients with environment variables.",
