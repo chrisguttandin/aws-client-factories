@@ -43,7 +43,7 @@
     "node": ">=10.15.3"
   },
   "files": [
-    "build/es2018/",
+    "build/es2019/",
     "build/node/",
     "src/"
   ],
@@ -70,6 +70,6 @@
     "prepublishOnly": "grunt build",
     "test": "grunt lint && grunt test"
   },
-  "types": "build/es2018/module.d.ts",
+  "types": "build/es2019/module.d.ts",
   "version": "7.0.63"
 }
