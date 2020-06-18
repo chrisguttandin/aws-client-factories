@@ -1,7 +1,6 @@
 const { env } = require('process');
 
 describe('AWS.DynamoDB', () => {
-
     let awsAccessKeyId;
     let awsEndpoint;
     let awsRegion;
@@ -37,5 +36,4 @@ describe('AWS.DynamoDB', () => {
 
         expect(dynamoDB.config.endpoint).to.not.equal(awsEndpoint);
     });
-
 });

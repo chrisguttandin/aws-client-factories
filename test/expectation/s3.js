@@ -1,7 +1,6 @@
 const { env } = require('process');
 
 describe('AWS.S3', () => {
-
     let awsAccessKeyId;
     let awsEndpoint;
     let awsRegion;
@@ -37,5 +36,4 @@ describe('AWS.S3', () => {
 
         expect(s3.config.endpoint).to.not.equal(awsEndpoint);
     });
-
 });

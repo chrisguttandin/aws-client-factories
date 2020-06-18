@@ -4,7 +4,6 @@ import { env } from 'process';
 import { stub } from 'sinon';
 
 describe('s3ClientFactory', () => {
-
     let s3ClientFactory;
 
     beforeEach(() => {
@@ -16,7 +15,6 @@ describe('s3ClientFactory', () => {
     });
 
     describe('create()', () => {
-
         let endpoint;
 
         beforeEach(() => {
@@ -59,7 +57,5 @@ describe('s3ClientFactory', () => {
                 secretAccessKey
             });
         });
-
     });
-
 });

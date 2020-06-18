@@ -4,7 +4,6 @@ import { env } from 'process';
 import { stub } from 'sinon';
 
 describe('dynamoDbClientFactory', () => {
-
     let dynamoDbClientFactory;
 
     beforeEach(() => {
@@ -16,7 +15,6 @@ describe('dynamoDbClientFactory', () => {
     });
 
     describe('create()', () => {
-
         let endpoint;
 
         beforeEach(() => {
@@ -59,7 +57,5 @@ describe('dynamoDbClientFactory', () => {
                 secretAccessKey
             });
         });
-
     });
-
 });
