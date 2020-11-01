@@ -15,10 +15,10 @@ module.exports = (grunt) => {
             cmd: `eslint --config config/eslint/test.json --ext .js ${fix ? '--fix ' : ''}--report-unused-disable-directives test/`
         },
         'test-expectation': {
-            cmd: 'mocha --bail --recursive --require config/mocha/config-expectation.js test/expectation'
+            cmd: 'mocha --bail --parallel --recursive --require config/mocha/config-expectation.js test/expectation'
         },
         'test-unit': {
-            cmd: 'mocha --bail --recursive --require config/mocha/config-unit.js test/unit'
+            cmd: 'mocha --bail --parallel --recursive --require config/mocha/config-unit.js test/unit'
         }
     };
 };
