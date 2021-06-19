@@ -50,12 +50,6 @@
         "src/"
     ],
     "homepage": "https://github.com/chrisguttandin/aws-client-factories",
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint --edit --extends @commitlint/config-angular",
-            "pre-commit": "pretty-quick --config config/prettier/config.json --staged && grunt lint"
-        }
-    },
     "keywords": [
         "AWS",
         "DynamoDB",
@@ -69,6 +63,7 @@
         "url": "https://github.com/chrisguttandin/aws-client-factories.git"
     },
     "scripts": {
+        "prepare": "husky install",
         "prepublishOnly": "grunt build",
         "test": "grunt lint && grunt test"
     },
