@@ -4,10 +4,10 @@ module.exports = () => {
             cmd: 'npm run build'
         },
         'test-expectation': {
-            cmd: 'mocha --bail --parallel --recursive --require config/mocha/config-expectation.js test/expectation'
+            cmd: 'npm run test:expectation'
         },
         'test-unit': {
-            cmd: 'mocha --bail --parallel --recursive --require config/mocha/config-unit.js test/unit'
+            cmd: 'npm run test:unit'
         }
     };
 };
