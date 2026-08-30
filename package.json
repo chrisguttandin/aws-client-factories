@@ -55,6 +55,7 @@
     "license": "MIT",
     "main": "build/node/module.js",
     "name": "aws-client-factories",
+    "packageManager": "npm@12",
     "repository": {
         "type": "git",
         "url": "https://github.com/chrisguttandin/aws-client-factories.git"
